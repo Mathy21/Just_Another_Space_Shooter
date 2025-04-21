@@ -14,5 +14,14 @@ function player_moving_state(){
 }
 
 function player_shooting_state(){
-    
+    var _move = move_function();
+    if(!move){
+        state = PLAYER_STATE.IDLE;
+    }
+    if(shoot && shooting){
+        
+    }
+        else{
+            state = PLAYER_STATE.IDLE;
+        }
 }
