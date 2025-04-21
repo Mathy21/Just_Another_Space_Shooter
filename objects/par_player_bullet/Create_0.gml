@@ -1,5 +1,7 @@
 // Movement
 spd = 4;
+hspd = 0;
+vspd = 0;
 dir = 90;
 // State Machine
 enum BULLET_STATE{

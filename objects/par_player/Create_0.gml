@@ -19,13 +19,20 @@ right = 0;
 shoot = 0;
 moving = 0;
 shooting = 0;
+
+// Shoot
+shoot_cooldown_v = 10;
+shoot_cooldown = 0;
+
 // State Machine
 enum PLAYER_STATE{
+    BASE,
     IDLE,
     MOVING,
     SHOOTING
 }
-state = PLAYER_STATE.IDLE;
+state = PLAYER_STATE.BASE;
+state_array[PLAYER_STATE.BASE] = player_base_state;
 state_array[PLAYER_STATE.IDLE] = player_idle_state;
 state_array[PLAYER_STATE.MOVING] = player_moving_state;
 state_array[PLAYER_STATE.SHOOTING] = player_shooting_state;
@@ -37,7 +44,7 @@ set_inputs = function(_up,_left,_down,_right,_shoot){
     left = keyboard_check(_left);
     down = keyboard_check(_down);
     right = keyboard_check(_right);
-    shoot = keyboard_check_pressed(_shoot);
+    shoot = keyboard_check(_shoot);
     moving = up || left || down || right ? true : false;
     shooting = shoot ? true : false;
 }
@@ -55,5 +62,11 @@ move_function = function(){
 }
 
 shoot_function = function(){
-    instance_create_layer(x,y,"Bullets",par_player_bullet);
+    if(shoot_cooldown > 0){
+        shoot_cooldown --;
+    }
+    if(shoot_cooldown <= 0){
+        instance_create_layer(x,y,"Bullets",par_player_bullet);
+        shoot_cooldown = shoot_cooldown_v;
+    }
 }
