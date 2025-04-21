@@ -2,15 +2,15 @@
 spd = 4;
 hspd = 0;
 vspd = 0;
-dir = 90;
+dir = 270;
 // State Machine
-enum PLAYER_BULLET_STATE{
+enum ENEMY_BULLET_STATE{
     MOVING,
     DESTROIED
 };
-state = PLAYER_BULLET_STATE.MOVING;
-state_array[PLAYER_BULLET_STATE.MOVING] = player_bullet_moving_state;
-state_array[PLAYER_BULLET_STATE.DESTROIED] = player_bullet_destroied_state;
+state = ENEMY_BULLET_STATE.MOVING;
+state_array[ENEMY_BULLET_STATE.MOVING] = enemy_bullet_moving_state;
+state_array[ENEMY_BULLET_STATE.DESTROIED] = enemy_bullet_destroied_state;
 
 
 
