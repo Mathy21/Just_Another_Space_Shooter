@@ -40,14 +40,14 @@
   "name":"proj_just_another_space_shooter",
   "resources":[
     {"id":{"name":"par_player","path":"objects/par_player/par_player.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_tests","path":"rooms/rm_tests/rm_tests.yy",},},
     {"id":{"name":"sc_player_state_machine","path":"scripts/sc_player_state_machine/sc_player_state_machine.yy",},},
     {"id":{"name":"spr_blank_square","path":"sprites/spr_blank_square/spr_blank_square.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_tests","path":"rooms/rm_tests/rm_tests.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
