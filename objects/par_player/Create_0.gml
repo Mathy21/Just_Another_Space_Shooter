@@ -7,9 +7,13 @@ vspd = 0;
 life = 0;
 inputs = {
   up: vk_up,
+  sec_up: ord("w"),
   left: vk_left,
+  sec_left: ord("A"),
   down: vk_down,
+  sec_down: ord("S"),
   right: vk_right,
+  sec_right: ord("D"),
   shoot: vk_space  
 };
 up = 0;
