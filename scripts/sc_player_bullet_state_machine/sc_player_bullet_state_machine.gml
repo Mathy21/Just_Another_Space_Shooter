@@ -12,8 +12,9 @@ function player_bullet_moving_state(){
 
 function player_bullet_damage_state(){
     var _col = instance_place(x,y,instance);
+    var _damage = damage;
     with(_col){
-        _col.damage_system(other.damage);
+        _col.damage_system(_damage);
     }
     state = PLAYER_BULLET_STATE.DESTROIED;
 }
